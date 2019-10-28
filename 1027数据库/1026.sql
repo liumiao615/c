@@ -26,7 +26,7 @@
 -- select name,chinese + english + matn total from student order by total desc;
 -- select name,chinese ,english ,matn from student order by matn desc,english,chinese desc;
 
--- select version();-- 设置默认时间
+
 
 
 
