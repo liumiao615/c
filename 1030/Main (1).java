@@ -14,14 +14,14 @@ public class Main {
             switch (selected) {
                 case 1:
                     add(contact, scanner); break;
-                    /*
+                    
                 case 2:
                     search(scanner); break;
                 case 3:
                     remove(scanner); break;
                 case 4:
                     update(scanner); break;
-                     */
+                     
                 default:
                     System.out.println("指令错误");
             }
