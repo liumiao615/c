@@ -20,6 +20,5 @@ public class isPalindrome {
     }
     public static void main(String[] args) {
         System.out.println(ispalindrome("0p"));
-
     }
 }
