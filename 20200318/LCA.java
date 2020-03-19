@@ -1,6 +1,5 @@
 public class LCA {
     public static int getLCA(int a, int b) {
-        // write code here
         int fatherA = a;
         int fatherB = b;
         while(fatherA != fatherB ){
