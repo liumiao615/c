@@ -4,7 +4,7 @@ import java.util.Random;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
-public class 单生产者消费者 {
+public class 单生产者消费者1 {
 
     private static 阻塞1 queue = new 阻塞1();
     private static class producer extends Thread{
