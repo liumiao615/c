@@ -1,0 +1,38 @@
+//聚合查询 COUNT AVG MAX MIN SUM
+AVG
+SELECT AVG(math) average FROM exam_result WHERE name LIKE '李%';
+COUNT(*)
+SELECT COUNT(*) id FROM exam_result;
+
+SELECT COUNT(*) boys FROM students WHERE gender = 'M';
+//分组聚合功能
+SELECT COUNT(*) num FROM students GROUP BY class_id;
+SELECT class_id, COUNT(*) num FROM students GROUP BY class_id;
+SELECT class_id, gender, COUNT(*) num FROM students GROUP BY class_id, gender;
+
+//多表查询
+//SELECT查询不但可以从一张表查询数据，还可以从多张表同时查询数据。
+//多表查询可以获取M*N条记录；
+
+
+//连接查询
+SELECT s.id,s.name,s.class_id,s.gender,s.score FROM students s;
+
+SELECT s.id,c.name class_name FROM students s INNER JOIN classes c ON
+s.class_id = c.id;
+//INNER JOIN只返回同时存在于两张表的行数据，由于students表的class_id包含1，2，3，classes表的id包含1，2，3，4，
+//所以，INNER JOIN根据条件s.class_id = c.id返回的结果集仅包含1，2，3。
+//RIGHT OUTER JOIN返回右表都存在的行。如果某一行仅在右表存在，那么结果集就会以NULL填充剩下的字段。
+//LEFT OUTER JOIN则返回左表都存在的行。
+
+
+
+
+
+
+
+
+
+
+
+
