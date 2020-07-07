@@ -1,0 +1,50 @@
+create table statistics(
+id int not null auto_increment,
+average double not null,
+primary key(id)
+);
+
+//写入查询结果集
+insert into statistics(average) select avg(math) from exam_result;
+insert into statistics(average) select avg(math) from exam_result group by class_id;
+
+实用的sql语句
+1，插入或者被替换
+replace into students(id,name) values(1,'jony');
+若id=1的数据不存在则插入，否则则删除之前记录再插入新纪录。
+2，插入或更新
+insert into students(id,name,class_id,score) values(1,'liyun',1,89) on duplicate key update name = 'jjj',score = 00;
+若id=1的记录不存在则插入，否则当前id= 1的记录将被更新，更新的字段由update指定
+3，插入或者忽略
+insert ignore into students(id,class_id,name,score) values(1,1,'kk',90);
+若id=1的数据不存在则 插入，否则忽略
+
+强制使用指定索引force index 
+select * from students force index (id) where class_id = 1 order by id desc;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
