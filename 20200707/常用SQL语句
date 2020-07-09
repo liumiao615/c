@@ -19,7 +19,7 @@ insert into students(id,name,class_id,score) values(1,'liyun',1,89) on duplicate
 insert ignore into students(id,class_id,name,score) values(1,1,'kk',90);
 若id=1的数据不存在则 插入，否则忽略
 
-强制使用指定索引force index 
+//强制使用指定索引force index 
 select * from students force index (id) where class_id = 1 order by id desc;
 
 
